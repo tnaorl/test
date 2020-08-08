@@ -94,10 +94,6 @@
       return document.querySelector(name);
     }
     function updateText() {
-      $('.fixedpercent .textfixed').innerText = 'percentage-based position:fixed (' + $('.bar.fixedpercent').clientHeight + 'px)';
-      $('.fixedvh .textfixed').innerText = 'viewport-unit position:fixed (' + $('.bar.fixedvh').clientHeight + 'px)';
-      $('.abspercent .textabs').innerText = 'percentage-based position:absolute (' + $('.bar.abspercent').clientHeight + 'px)';
-      $('.absvh .textabs').innerText = 'viewport-unit position:absolute (' + $('.bar.absvh').clientHeight + 'px)';
       $('.innerHeightLog').innerText = 'innrHeight: ' + window.innerHeight + ' ' + window.innerWidth + spinner[spinnerIx];
       spinnerIx = (spinnerIx+1) % spinner.length;
     }
@@ -125,17 +121,7 @@
 
 <body onresize="resized()">
 <div style="width:980px; height:1743px; background-color:blue></div>
-<div style="right: 0px" class="bar fixedpercent"><div class="textfixed">percentage-based position:fixed</div></div>
-<div style="right: 25px" class="bar fixedvh"><div class="textfixed">viewport-unit position:fixed</div></div>
-<div style="right: 50px" class="bar abspercent"><div class="textabs">percentage-based position:absolute</div></div>
-<div style="right: 75px" class="bar absvh"><div class="textabs">viewport-unit position:absolute</div></div>
 <div class="innerHeightLog"></div>
-<div id="consoleContainer">
-  <div id="console">
-  <br>
-    OnResize htdler calls will be displayed below with window.innerWidth and documentElement.clientHeight<br><br>
-  </div>
-</div>
 <div style="width:3000px; height:2000px; background-color:yellow;"></div>
 </body>
 </html>
