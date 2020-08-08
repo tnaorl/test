@@ -99,7 +99,7 @@
       $('.fixedvh .textfixed').innerText = 'viewport-unit position:fixed (' + $('.bar.fixedvh').clientHeight + 'px)';
       $('.abspercent .textabs').innerText = 'percentage-based position:absolute (' + $('.bar.abspercent').clientHeight + 'px)';
       $('.absvh .textabs').innerText = 'viewport-unit position:absolute (' + $('.bar.absvh').clientHeight + 'px)';
-      $('.innerHeightLog').innerText = 'innerHeight: ' + window.innerHeight + 'px ' + spinner[spinnerIx];
+      $('.innerHeightLog').innerText = 'innerHeight: ' + window.innerHeight + ' ' + window.innerWidth + spinner[spinnerIx];
       spinnerIx = (spinnerIx+1) % spinner.length;
     }
     function resized() {
