@@ -86,6 +86,9 @@
       height: 20px;
       background-color: chartreuse;
     }
+    .inner {
+      background-color: lightgrey;
+      }
   </style>
   <script>
     const spinner = ['/', '-', '\\', '|'];
@@ -95,6 +98,8 @@
     }
     function updateText() {
       $('.innerHeightLog').innerText = 'inner ' + window.innerWidth + ' ' + window.innerHeight + spinner[spinnerIx];
+      $('.inner').style.width = window.innerWidth + 'px';
+      $('.inner').style.height = window.innerHeight + 'px';
       spinnerIx = (spinnerIx+1) % spinner.length;
     }
     function resized() {
@@ -121,6 +126,7 @@
 
 <body onresize="resized()">
 <div class="innerHeightLog"></div>
+<div class="inner"></div>
 <div style="width:980px; height:5000px; background-color:yellow;"></div>
 </body>
 </html>
